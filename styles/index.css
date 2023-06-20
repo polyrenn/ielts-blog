@@ -3,3 +3,13 @@
 @tailwind components;
 /* purgecss end ignore */
 @tailwind utilities;
+
+.hyper-page:hover {
+    @apply bg-teal-300;
+    transition: 1s ease-in; 
+}
+
+.hyper-page {
+    @apply px-4 p-1;
+
+}

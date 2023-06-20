@@ -23,7 +23,14 @@ export const post = {
       name: 'content',
       title: 'Content',
       type: 'array',
-      of: [{ type: 'block' }],
+      of: [
+        {
+          type: 'block'
+        },
+        {
+          type: 'image'
+        }
+      ],
     },
     {
       name: 'excerpt',

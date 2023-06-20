@@ -13,6 +13,9 @@ module.exports = {
         success: '#0070f3',
         cyan: '#79FFE1',
       },
+      fontFamily: {
+        'manrope': ['Manrope', 'sans-serif']
+      },
       spacing: {
         28: '7rem',
       },
