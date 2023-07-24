@@ -28,7 +28,7 @@ export default function Footer() {
                 <h4 href="/speaking" className='font-medium'>
                       Module Sitemap
                 </h4>
-              <Link className='underline mb-1 w-max' href="/speaking">
+              <Link className='underline mb-1 w-max' href="#">
                 Speaking
               </Link>
 
