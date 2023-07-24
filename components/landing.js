@@ -19,7 +19,7 @@ export default function Landing({ allPosts, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+          <title>{`Ielts Solution - Ielts Tips & Tricks`}</title>
         </Head>
           <Navigation></Navigation>
         <Container>
@@ -37,7 +37,7 @@ export default function Landing({ allPosts, preview }) {
                         </p>
                     </div>
                     <div className='cta pt-6'>
-                    <Link href="/speaking" >
+                    <Link href="#" >
                         <button className='bg-white items-center flex-row-reverse flex p-2'>
                           <Image
                             priority

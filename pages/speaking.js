@@ -32,7 +32,7 @@ export default function SpeakingPage({ speakingPost, toc, preview }) {
     setIsContentToggled(!isContentToggled)
   }
 
-  const tocA = 'bg-slate-300 md:col-span-1 md:rounded-2xl md:p-6 md:sticky md:h-max md:top-4'
+  const tocA = 'px-8 pt-8 border rounded-xl md:col-span-1 md:rounded-2xl md:p-6 md:sticky md:h-max md:top-4'
   const tocB = 'fixed bottom-0 left-0 right-0 justify-center px-8 pt-8 h-2/3 bg-white z-50 rounded-t-xl rounded-r-xl overflow-auto'
 
   function isElementInView(element) {
@@ -83,7 +83,7 @@ export default function SpeakingPage({ speakingPost, toc, preview }) {
 }
 
 const componentsToc = {
-  block: ({children}) => <Link onClick={handleLinkClick} scroll={false} href={`#${children[0]}`}><h4 className='text-2xl mb-2'>{children}</h4></Link>
+  block: ({children}) => <Link className='flex w-max' onClick={handleLinkClick} scroll={false} href={`#${children[0]}`}><h4 className='text-md text-blue-950 mb-2'>{children}</h4></Link>
 }
 
 
@@ -122,11 +122,10 @@ const componentsToc = {
                <section className='flex flex-col mt-4 md:grid md:grid-cols-3 md:gap-4 md:relative'>
                 <div className={`${isContentToggled ? tocB : tocA} toc`}>
                   <div className='flex flex-row justify-between items-center toc-heading mb-8'>
-                    <h4 className='text-base font-semibold'>CONTENTS</h4>
+                    <h4 ref={targetElementRef} className='text-base font-semibold'>CONTENTS</h4>
                    
                         <svg onClick={() => setIsContentToggled(!isContentToggled)} className={`w-6 h-6 ${isInView ? 'hidden' : 'block'}`} id="Filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>182 circle cross</title><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm4,14.587A1,1,0,1,1,14.587,16L12,13.414,9.414,16A1,1,0,0,1,8,14.586L10.586,12,8,9.414A1,1,0,0,1,9.414,8L12,10.586,14.587,8A1,1,0,1,1,16,9.413L13.414,12Z"/></svg>  
                   </div>
-                  <div ref={targetElementRef}>This is the target element</div>
                     <PortableText
                         value={toc.headings}
                         components={componentsToc}

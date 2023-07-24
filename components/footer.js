@@ -52,15 +52,10 @@ export default function Footer() {
                 <p className='mb-1'>+234(81)21519639</p>
               </div>
 
-              <div className=''>
-                <Link href="/speaking" className='font-medium'>
-                      Speaking
-              </Link>
-              </div>
           </div>
         </div>
 
-        <div className='footer-meta border-t border-accent-2 flex flex-row justify-between'>
+        <div className='footer-meta border-t border-accent-2 flex py-2 flex-row justify-center'>
           <div>
           <p>© {date}</p>
           </div>
