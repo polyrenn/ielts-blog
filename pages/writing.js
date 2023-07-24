@@ -37,7 +37,7 @@ export default function WritingPage({ allPosts, preview }) {
     <>
     <Layout>
         <Head>
-            <title>Speaking - Module</title>
+            <title>Writing - Module</title>
         </Head>
         <Navigation></Navigation>
     </Layout>    

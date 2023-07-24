@@ -10,6 +10,5 @@
 }
 
 .hyper-page {
-    @apply px-4 p-1;
-
+    @apply text-3xl font-normal mb-2 md:mb-0 md:h-auto md:text-base md:font-normal md:px-4 md:p-1 md:ml-2;
 }

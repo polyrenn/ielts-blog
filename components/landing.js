@@ -9,6 +9,7 @@ import Navigation from './navigation'
 import Image from 'next/image';
 import linkIcon from '../assets/arrow-link.svg'
 import styles from './styles/Landing.module.css'
+import Link from 'next/link'
 
 
 export default function Landing({ allPosts, preview }) {
@@ -23,41 +24,48 @@ export default function Landing({ allPosts, preview }) {
           <Navigation></Navigation>
         <Container>
           <Intro />
-          <div className='sm:flex md:grid grid-cols-2 gap-4'>
-            <div className='speaking row-span-2 col-span-1 bg-slate-100'>
+          <div className='flex flex-col md:grid grid-cols-2 gap-4'>
+            <div className='speaking flex flex-col justify-between py-10 px-6 row-span-2 col-span-1 bg-purple-200 text-purple-900'>
                 <div className='main-module'>
                     <div className='content'>
-                        <h4 className='text-6xl md:text-2xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
+                        <h4 className='text-3xl md:text-2xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
                           Speaking 
                         </h4>
+                        <p>/ˈspiː.kɪŋ/</p>
                         <p>
-                        Learn five major principles of effective communication.
+                        It is the process of transmitting one’s thoughts, ideas, attitudes and feelings through the mouth and vocal cords with the intention of communicating with others.
                         </p>
                     </div>
                     <div className='cta pt-6'>
-                      <button className='bg-slate-600 items-center flex-row-reverse flex p-2 text-white rounded'>
-                      <Image
-                        priority
-                        src={linkIcon}
-                      />
-                        <span>View Module</span>
-                      </button>
+                    <Link href="/speaking" >
+                        <button className='bg-white items-center flex-row-reverse flex p-2'>
+                          <Image
+                            priority
+                            src={linkIcon}
+                            alt='link-icon'
+                          />
+                            <span>View Module</span>
+                          </button>
+                    </Link>
                     </div>
                 </div>
                 <div className='sub-module mt-8'>
                 <div className='content'>
-                        <h4 className='text-6xl md:text-xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
+                        <h4 className='text-3xl md:text-xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
                           Communication 
                         </h4>
+                        <p>/kəˌmjuː.nɪˈkeɪ.ʃən/</p>
                         <p>
-                        Learn five major principles of effective communication.
+                        This is the exchange of information between two or more individuals. The process of communication involves the transferring of thoughts, concepts, attitudes and emotions from one person to another.
+
                         </p>
                     </div>
                     <div className='cta pt-6'>
-                      <button className='bg-slate-600 items-center flex-row-reverse flex p-2 text-white'>
+                      <button className='bg-purple-300 items-center flex-row-reverse flex p-2'>
                       <Image
                         priority
                         src={linkIcon}
+                        alt='link-icon'
                       />
                         <span>View Module</span>
                       </button>
@@ -65,24 +73,29 @@ export default function Landing({ allPosts, preview }) {
                 </div>
             </div>
 
-            <div className='speaking bg-slate-100'>
+            <div className='reading py-10 px-6 bg-emerald-200 text-emerald-900 md:mb-0'>
                 <div className='main'>
                     <div className='content'>
-                        <h4 className='text-6xl md:text-2xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
-                          Speaking
+                        <h4 className='text-3xl md:text-2xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
+                          Reading
                         </h4>
+                        <p>/ˈriː.dɪŋ/</p>
                         <p>
-                        Learn five major principles of effective communication.
+                        The Reading skill can be described as the ability to accurately extract information from a text based on its context. 
+
                         </p>
                     </div>
                     <div className='cta pt-6'>
-                      <button className='bg-slate-600 items-center flex-row-reverse flex p-2 text-white'>
-                      <Image
-                        priority
-                        src={linkIcon}
-                      />
-                        <span>View Module</span>
-                      </button>
+                    <Link href="/reading" >
+                        <button className='bg-white items-center flex-row-reverse flex p-2'>
+                          <Image
+                            priority
+                            src={linkIcon}
+                            alt='link-icon'
+                          />
+                            <span>View Module</span>
+                          </button>
+                    </Link>
                     </div>
                 </div>
                 <div className='submodule'>
@@ -90,24 +103,28 @@ export default function Landing({ allPosts, preview }) {
                 </div>
             </div>
 
-            <div className='sm:col-start-2  speaking col-start-3 bg-slate-100'>
+            <div className='col-start-2 py-10 px-6 writing bg-amber-200 text-amber-900'>
                 <div className='main'>
                     <div className='content'>
-                        <h4 className='text-6xl md:text-2xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
-                          Speaking
+                        <h4 className='text-3xl md:text-2xl font-regular font-manrope tracking-tighter leading-tight md:pr-8'>
+                          Writing
                         </h4>
+                        <p>/ˈraɪ.tɪŋ/</p>
                         <p>
-                        Learn five major principles of effective communication.
+                        This criterion assesses how appropriate, accurate and relevant the response is, in fulfilling the requirements set out in the task.
                         </p>
                     </div>
                     <div className='cta pt-6'>
-                      <button className='bg-slate-600 items-center flex-row-reverse flex p-2 text-white'>
-                      <Image
-                        priority
-                        src={linkIcon}
-                      />
-                        <span>View Module</span>
-                      </button>
+                    <Link href="/writing" >
+                        <button className='bg-white items-center flex-row-reverse flex p-2'>
+                          <Image
+                            priority
+                            src={linkIcon}
+                            alt='link-icon'
+                          />
+                            <span>View Module</span>
+                          </button>
+                    </Link>
                     </div>
                 </div>
                 <div className='submodule'>
@@ -116,18 +133,6 @@ export default function Landing({ allPosts, preview }) {
             </div>
           </div>
 
-          
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
         </Container>
       </Layout>
     </>

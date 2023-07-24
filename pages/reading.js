@@ -37,7 +37,7 @@ export default function ReadingPage({ allPosts, preview }) {
     <>
     <Layout>
         <Head>
-            <title>Speaking - Module</title>
+            <title>Reading - Module</title>
         </Head>
         <Navigation></Navigation>
     </Layout>    
